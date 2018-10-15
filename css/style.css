@@ -1,3 +1,28 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+h1 {
+    margin-top: 0rem;
+    padding-top: 5rem;
+    text-align: center;
+}
+
+header, header p:nth-child(2){
+    background-color: #1E3D5A;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+ul{
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: start;
+    justify-items: center;
+}
+a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    
+}
