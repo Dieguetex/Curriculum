@@ -1,13 +1,18 @@
 body{
-    font-family: 'Montserrat', sans-serif;
+    background-color: silver;
 }
-h1 {
-    margin-top: 0rem;
+main{
+    font-family: 'Muli', sans-serif;
+    display: grid;
+    
+}
+header p:nth-of-type(1){
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+header, footer{
+    font-family: 'Muli', sans-serif;
     padding-top: 5rem;
-    text-align: center;
-}
-
-header, header p:nth-child(2){
     background-color: #1E3D5A;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -21,8 +26,8 @@ ul{
     justify-items: center;
 }
 a {
-    width: 100%;
+    padding-left: 3rem;
     text-decoration: none;
     color: white;
-    
+    padding-right: 3rem;
 }
