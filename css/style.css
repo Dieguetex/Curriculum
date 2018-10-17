@@ -1,33 +1,36 @@
-body{
-    background-color: silver;
+* {
+  box-sizing: border-box;
 }
-main{
-    font-family: 'Muli', sans-serif;
-    display: grid;
-    
+
+header {
+  height: 150vh;
+  background-color: #f04646;
 }
-header p:nth-of-type(1){
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+header div:nth-of-type(1) {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
 }
-header, footer{
-    font-family: 'Muli', sans-serif;
-    padding-top: 5rem;
-    background-color: #1E3D5A;
-    color: rgb(255, 255, 255);
-    text-align: center;
+header div:nth-of-type(1) h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-top: 5rem;
 }
-ul{
-    padding: 0;
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    align-items: start;
-    justify-items: center;
+
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: "Montserrat", sans-serif;
+  /* display: flex; */
 }
-a {
-    padding-left: 3rem;
-    text-decoration: none;
-    color: white;
-    padding-right: 3rem;
+main section {
+  width: 100%;
+  padding-right: 3rem;
 }
+
+/*# sourceMappingURL=style.css.map */

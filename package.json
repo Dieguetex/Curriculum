@@ -4,13 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "parallelshell \"npm run server\" \"npm run watch:sass\"",
+    "server": "http-server ../",
+    "watch:sass": "nodemon -e scss -x \"sass scss:css\"",
+    "sass": "sass scss:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "nodemon": "^1.18.4",
     "normalize.css": "^8.0.0",
-    "npm": "^6.2.0"
+    "npm": "^6.2.0",
+    "parallelshell": "^3.0.2",
+    "sass": "^1.14.2"
   }
 }

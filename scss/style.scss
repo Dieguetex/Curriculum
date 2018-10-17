@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 150vh;
+    background-color: rgb(240, 70, 70);
+
+    
+    div:nth-of-type(1){
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        align-content: center;
+        text-align: center;
+        margin-bottom: 3rem;
+    
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding-top: 5rem;
+        }
+    }
+}
+
+main {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Montserrat', sans-serif;
+    /* display: flex; */
+
+    section{
+        width: 100%;
+        padding-right: 3rem;
+    }
+}
