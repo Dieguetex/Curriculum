@@ -2,21 +2,44 @@
   box-sizing: border-box;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  /* align-content: center; */
+}
+
+.child {
+  grid-column-start: span 3;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.childHeader {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 header {
-  background-color: #f04646;
+  color: whitesmoke;
+  background-color: #2B3A42;
   padding-bottom: 10vh;
 }
-header div:nth-of-type(1) {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  align-content: center;
+header div.banner {
+  display: none;
+}
+header div:nth-of-type(2) {
+  /* width: 80%; */
   text-align: center;
   margin-bottom: 3rem;
 }
-header div:nth-of-type(1) h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 5rem;
+header div:nth-of-type(2) h1 {
+  font-size: 4rem;
   margin-top: 0;
   margin-bottom: 1rem;
   padding-top: 5rem;
@@ -31,6 +54,22 @@ main {
 main section {
   width: 100%;
   padding-right: 3rem;
+}
+main section h2 {
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+footer {
+  height: 30vh;
+  color: whitesmoke;
+  background-color: #2B3A42;
+  text-align: center;
+  display: grid;
+  align-content: end;
+}
+footer p {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
