@@ -1,12 +1,12 @@
-* {
-    box-sizing: border-box;
+*, 
+*::before, *::after, 
+*:before, *:after { 
+box-sizing : border-box;
 }
 
 .container{
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    /* align-content: center; */
-
 }
 
 .child{
@@ -23,22 +23,60 @@
 
 * {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 
+
+
 header{
+    position: relative;
     color: whitesmoke;  
-    background-color: #2B3A42;
+    background-color: rgb(58, 78, 88);
     padding-bottom: 10vh;
 
     div.banner{
-        display: none;
+        //SEE HOW IT WORKS (STICKY)
+        position: sticky;
+
+
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-color: #436775;
+        height: 3rem;
+        display: grid;
+        padding: 0 1.5rem;
+        grid-template-columns: 47.5% 47.5%;
+        grid-column-gap: 5%;
+        align-items: center;
+
+        div:nth-of-type(1) {
+            width: 4rem;
+            height: 1.75rem;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        div:nth-of-type(2){
+            text-align: end;
+            display: inline;
+            p{display: inline}
+            p:nth-of-type(3), p:nth-of-type(2) {
+                margin-left: 1rem;
+            }   
+        }
     }
-    div:nth-of-type(2){
+
+    div.mainHeader{
         /* width: 80%; */
         text-align: center;
         margin-bottom: 3rem;
     
+        p:nth-of-type(1){
+            margin-bottom: 6rem;
+        }
+
         h1 {
             font-size: 4rem;
-            margin-top: 0;
+            margin-top: 4rem;
             margin-bottom: 1rem;
             padding-top: 5rem;
         }
@@ -46,14 +84,14 @@ header{
 }
 
 main {
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Montserrat', sans-serif;
     /* display: flex; */
 
     section{
         width: 100%;
-        padding-right: 3rem;
         h2{
             padding-top: 2.5rem;
             padding-bottom: 1.5rem;
@@ -68,6 +106,7 @@ footer {
     text-align: center;
     display: grid;
     align-content: end;
+    margin-top: 20vh;
     p{
         margin-bottom: 2rem;
     }
