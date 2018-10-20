@@ -1,5 +1,4 @@
 @import 'material-shadow';
-/* "nodemon -e scss -x \"sass scss:css\"*/
 
 *, *::before, *::after, 
 *:before, *:after { 
@@ -39,14 +38,13 @@ header{
         .dark {
             @include material-shadow($z-depth: 2, $strength: 3);
           
-        }  
-      
-      
+        }
         .float {
             transition: all .2s ease-out;
             &:hover {
             transform: translateY(-2px);
             @include material-shadow(3);
+            border-radius: 100%;
             }
         }
 
@@ -55,13 +53,22 @@ header{
         width: 100%;
         background-color: #436775;
         height: 4rem;
-        padding: 0 1.5rem;
-        padding-left: 0.5rem;
+        padding: 0 0.5rem;
         display: grid;
-        grid-template-columns: 47.5% 47.5%;
-        grid-column-gap: 5%;
+        grid-template-columns: 40% 20% 40%;
         align-items: center;
+        justify-content: center;
+        justify-items: center;
 
+        //hamburguesa
+        .hamburger--elastic{
+            justify-self: start;
+            background-color: #436775;
+            border: none;
+            width: 50%;
+        }
+
+        //logo
         div:nth-of-type(1) {
             width: 4rem;
             height: 4rem;
@@ -70,20 +77,22 @@ header{
                 height: 100%;
             }
         }
+        //iconos
         div:nth-of-type(2){
-            display: inline;
-            text-align: end;
+            justify-self: end;
             span{
                 display: inline-block;
-                p{
-                    padding-left: .5rem;
+                height: 1.5rem;
+                /*img{
+                     padding-left: .5rem;
                     padding-right: .5rem;
+                    border-radius: 50%;
                     margin-top: .5rem;
                     margin-bottom: .5rem;
                 }
             }
             span:nth-of-type(3), span:nth-of-type(2) {
-                margin-left: 1rem;
+                margin-left: 1rem; */
             }
         } 
     }

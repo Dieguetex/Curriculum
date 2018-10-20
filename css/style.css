@@ -52,7 +52,6 @@ code {
   color: #ff3333;
   border: 1px solid #ddd;
 } */
-/* "nodemon -e scss -x \"sass scss:css\"*/
 *, *::before, *::after,
 *:before, *:after {
   box-sizing: border-box;
@@ -92,12 +91,12 @@ header div.banner {
   width: 100%;
   background-color: #436775;
   height: 4rem;
-  padding: 0 1.5rem;
-  padding-left: 0.5rem;
+  padding: 0 0.5rem;
   display: grid;
-  grid-template-columns: 47.5% 47.5%;
-  grid-column-gap: 5%;
+  grid-template-columns: 40% 20% 40%;
   align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 header div.banner .dark {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.48), 0 3px 6px rgba(0, 0, 0, 0.69);
@@ -108,6 +107,13 @@ header div.banner .float {
 header div.banner .float:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 100%;
+}
+header div.banner .hamburger--elastic {
+  justify-self: start;
+  background-color: #436775;
+  border: none;
+  width: 50%;
 }
 header div.banner div:nth-of-type(1) {
   width: 4rem;
@@ -118,20 +124,21 @@ header div.banner div:nth-of-type(1) img {
   height: 100%;
 }
 header div.banner div:nth-of-type(2) {
-  display: inline;
-  text-align: end;
+  justify-self: end;
 }
 header div.banner div:nth-of-type(2) span {
   display: inline-block;
-}
-header div.banner div:nth-of-type(2) span p {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-header div.banner div:nth-of-type(2) span:nth-of-type(3), header div.banner div:nth-of-type(2) span:nth-of-type(2) {
-  margin-left: 1rem;
+  height: 1.5rem;
+  /*img{
+           padding-left: .5rem;
+          padding-right: .5rem;
+          border-radius: 50%;
+          margin-top: .5rem;
+          margin-bottom: .5rem;
+      }
+  }
+  span:nth-of-type(3), span:nth-of-type(2) {
+      margin-left: 1rem; */
 }
 header div.mainHeader {
   /* width: 80%; */
