@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parallelshell \"npm run server\" \"npm run watch:sass\"",
     "server": "http-server ../",
-    "watch:sass": "nodemon -e scss -x \"sass scss:css\"",
+    "watch:sass":  "sass --watch ./scss/style.scss ./css/style.css",
     "sass": "sass scss:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

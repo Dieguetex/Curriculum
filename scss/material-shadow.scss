@@ -1,0 +1,91 @@
+//- Mixin: Material Shadow
+///
+/// Box shadows based on 5 Material Design presets;
+///
+/// @param {variable} $z-depth [1] - shadow distance on z-axis
+/// @param {variable} $strength [1] - multiplier for shadow strength/darkness
+/// @param {variable} $color [1] - shadow color
+/// @group layout
+/// @example
+///   div {
+///     @include material-shadow(3);
+///   }
+/// @link https://codepen.io/dbox/pen/RawBEW
+
+@mixin material-shadow($z-depth: 1, $strength: 1, $color: black) {
+    @if $z-depth == 1 {
+      box-shadow: 0 1px 3px rgba($color, $strength * 0.14), 0 1px 2px rgba($color, $strength * 0.24);
+    }
+    @if $z-depth == 2 {
+      box-shadow: 0 3px 6px rgba($color, $strength * 0.16), 0 3px 6px rgba($color, $strength * 0.23);
+    }  
+    @if $z-depth == 3 {
+      box-shadow: 0 10px 20px rgba($color, $strength * 0.19), 0 6px 6px rgba($color, $strength * 0.23);
+    }    
+    @if $z-depth == 4 {
+      box-shadow: 0 15px 30px rgba($color, $strength * 0.25), 0 10px 10px rgba($color, $strength * 0.22);    
+    }
+    @if $z-depth == 5{
+      box-shadow: 0 20px 40px rgba($color, $strength * 0.30), 0 15px 12px rgba($color, $strength * 0.22);   
+    }
+    @if ($z-depth < 1) or ($z-depth > 5) {
+      @warn "$z-depth must be between 1 and 5";
+    }
+  }
+  
+/*  // call it
+  div {  
+        @include material-shadow($z-depth: );
+      }
+    }  
+  }
+  
+  .dark div {
+        @include material-shadow($z-depth: 0, $strength: 2);
+      
+    }  
+  
+  
+  .float {
+    transition: all .2s ease-out;
+    &:hover {
+      transform: translateY(-5px);
+      @include material-shadow(5);
+    }
+  } */
+  
+  // ignore me
+  /*    
+  section.material {
+    padding: 40px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 20px;
+    background: #f3f3f3; 
+  }
+  
+  div.material {
+    font-size: 12px;
+    background: #fff;
+    padding: 50px;
+    text-align: center;
+    flex-basis: 100px;
+    margin: 15px;  
+  }
+  .dark {
+    background: #555;
+  }
+  body.material {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    padding: 0 5%;
+  }
+  code {
+    background: #f3f3f3;
+    padding: 5px 12px;
+    color: #ff3333;
+    border: 1px solid #ddd;
+  } */

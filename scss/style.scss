@@ -1,5 +1,7 @@
-*, 
-*::before, *::after, 
+@import 'material-shadow';
+/* "nodemon -e scss -x \"sass scss:css\"*/
+
+*, *::before, *::after, 
 *:before, *:after { 
 box-sizing : border-box;
 }
@@ -21,61 +23,90 @@ box-sizing : border-box;
     padding-left: 2rem;
 }
 
-* {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+* {
+    font-family: 'Roboto', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
 
 
 
 header{
-    position: relative;
     color: whitesmoke;  
     background-color: rgb(58, 78, 88);
     padding-bottom: 10vh;
 
     div.banner{
-        //SEE HOW IT WORKS (STICKY)
-        position: sticky;
-
+        @include material-shadow($z-depth:2 );
+        .dark {
+            @include material-shadow($z-depth: 2, $strength: 3);
+          
+        }  
+      
+      
+        .float {
+            transition: all .2s ease-out;
+            &:hover {
+            transform: translateY(-2px);
+            @include material-shadow(3);
+            }
+        }
 
         position: absolute;
         top: 0;
         width: 100%;
         background-color: #436775;
-        height: 3rem;
-        display: grid;
+        height: 4rem;
         padding: 0 1.5rem;
+        padding-left: 0.5rem;
+        display: grid;
         grid-template-columns: 47.5% 47.5%;
         grid-column-gap: 5%;
         align-items: center;
 
         div:nth-of-type(1) {
             width: 4rem;
-            height: 1.75rem;
+            height: 4rem;
             img{
                 width: 100%;
                 height: 100%;
             }
         }
         div:nth-of-type(2){
-            text-align: end;
             display: inline;
-            p{display: inline}
-            p:nth-of-type(3), p:nth-of-type(2) {
+            text-align: end;
+            span{
+                display: inline-block;
+                p{
+                    padding-left: .5rem;
+                    padding-right: .5rem;
+                    margin-top: .5rem;
+                    margin-bottom: .5rem;
+                }
+            }
+            span:nth-of-type(3), span:nth-of-type(2) {
                 margin-left: 1rem;
-            }   
-        }
+            }
+        } 
     }
 
     div.mainHeader{
         /* width: 80%; */
         text-align: center;
         margin-bottom: 3rem;
+
+        p{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 26px;
+        }
     
         p:nth-of-type(1){
             margin-bottom: 6rem;
         }
 
         h1 {
-            font-size: 4rem;
+            
+            font-weight: 300;
+            font-size: 4rem;     
             margin-top: 4rem;
             margin-bottom: 1rem;
             padding-top: 5rem;
@@ -83,18 +114,37 @@ header{
     }
 }
 
+body {background-color: rgb(224, 224, 224);}
 main {
-    width: 60%;
+    background-color: white;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Montserrat', sans-serif;
-    /* display: flex; */
 
     section{
+        border-bottom: .5px solid silver;
+        border-radius: 10px;
         width: 100%;
+        padding: 2rem 2rem;
+        margin-top: 2rem;
+        &.material{
+            @include material-shadow($z-depth: 3);
+        }
         h2{
-            padding-top: 2.5rem;
+            font-weight: 100;
+            font-size: 35px;
+            line-height: 44px;
             padding-bottom: 1.5rem;
+        }
+        h3{
+            font-weight: 300;
+            font-size: 26px;
+            line-height: 40px;
+        }
+        p{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 26px;
         }
     }
 }
