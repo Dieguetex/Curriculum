@@ -62,6 +62,7 @@ header{
 
         //hamburguesa
         .hamburger--elastic{
+            outline-style: none;
             justify-self: start;
             background-color: #436775;
             border: none;
@@ -80,6 +81,7 @@ header{
         //iconos
         div:nth-of-type(2){
             justify-self: end;
+            margin-right: 1rem;
             span{
                 display: inline-block;
                 height: 1.5rem;
@@ -89,10 +91,10 @@ header{
                     border-radius: 50%;
                     margin-top: .5rem;
                     margin-bottom: .5rem;
-                }
+                }*/
             }
-            span:nth-of-type(3), span:nth-of-type(2) {
-                margin-left: 1rem; */
+            span:nth-of-type(2) {
+                margin-left: 1rem;
             }
         } 
     }
