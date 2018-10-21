@@ -1,0 +1,114 @@
+/* .head {
+	position: fixed;
+	top: 15px;
+	left: 50%;
+	margin-left: -200px;
+	width: 400px;
+}
+ */
+.head .line {
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	bottom: 6px;
+    border-radius:0 2px 3px 0;
+	left: 0;
+	right: 22px;
+	-webkit-transition: left 0.6s;
+	transition: left 0.6s;
+}
+
+.head .icon {
+	cursor: pointer;
+	float: right;
+	width: 61px;
+	position: relative;
+	height: 61px;
+}
+
+.head .icon div {
+	position: absolute;
+	left: 50%;
+	top: 58%;
+	-webkit-transform: translateX(-50%) translateY(-6px);
+	transform: translateX(-50%) translateY(-6px);
+	display: block;
+	width: 18px;
+	height: 1px;
+	z-index: 999;
+	background: #fff;
+}
+
+.head .icon div.open {
+    background: none;
+}
+
+.head .icon div.open:before,
+.head .icon div.open:after {
+    top: 0;
+}
+
+.head .icon div.open:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.head .icon div.open:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.head .icon div,
+.head .icon div:before,
+.head .icon div:after {
+    width: 18px;
+    height: 2px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    background: #fff;
+}
+
+.head .icon div:before,
+.head .icon div:after {
+    content: "";
+    position: absolute;
+}
+
+.head .icon div:before {
+    top: -6px;
+}
+
+.head .icon div:after {
+    top: 6px;
+}
+
+.head .icon svg {
+	z-index: 10;
+    width:100%;
+    height:100%;
+}
+
+.head .icon svg circle {
+	fill: none;
+	stroke: #fff;
+	stroke-width: .5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 39 39;
+	stroke-dashoffset: -39;
+	-webkit-transition: stroke-dashoffset .5s;
+	transition: stroke-dashoffset .5s;
+}
+
+.head.animate .line {
+	right: 25px;
+	left: 100%;
+}
+
+.head.animate svg circle {
+	stroke-dashoffset: 0;
+	-webkit-transition: stroke-dashoffset .5s;
+	transition: stroke-dashoffset .5s;
+}

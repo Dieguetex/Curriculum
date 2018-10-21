@@ -55,22 +55,24 @@ header{
         height: 4rem;
         padding: 0 0.5rem;
         display: grid;
-        grid-template-columns: 40% 20% 40%;
+        grid-template-columns: 40% 40%;
+        grid-column-gap: 10%;
         align-items: center;
         justify-content: center;
         justify-items: center;
 
         //hamburguesa
-        .hamburger--elastic{
-            outline-style: none;
-            justify-self: start;
-            background-color: #436775;
-            border: none;
-            width: 50%;
+        .head{
+            position: fixed;
+            top:10px;
+            right: 0;
+            width: 95%;
+            
         }
 
         //logo
-        div:nth-of-type(1) {
+        >div:nth-of-type(1) {
+            justify-self: start;
             width: 4rem;
             height: 4rem;
             img{
@@ -79,7 +81,7 @@ header{
             }
         }
         //iconos
-        div:nth-of-type(2){
+/*         >div:nth-of-type(1){
             justify-self: end;
             margin-right: 1rem;
             span{
@@ -92,11 +94,11 @@ header{
                     margin-top: .5rem;
                     margin-bottom: .5rem;
                 }*/
-            }
+            /* }
             span:nth-of-type(2) {
                 margin-left: 1rem;
-            }
-        } 
+            } 
+        }*/  
     }
 
     div.mainHeader{
