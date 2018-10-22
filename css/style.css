@@ -130,14 +130,14 @@ header div.banner .float:hover {
 }
 header div.banner .head {
   position: fixed;
-  top: 10px;
-  right: 0;
-  width: 95%;
+  top: 2.5px;
+  right: 3%;
+  width: 80%;
 }
 header div.banner > div:nth-of-type(1) {
   justify-self: start;
+  z-index: 10;
   width: 4rem;
-  height: 4rem;
 }
 header div.banner > div:nth-of-type(1) img {
   width: 100%;
