@@ -1,4 +1,4 @@
-import { Hamburger } from "./hamburguer.js";
+import { Hamburger } from './hamburguer.js';
 
 class Index {
     constructor() {

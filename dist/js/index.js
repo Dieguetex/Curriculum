@@ -1,4 +1,4 @@
-export class Hamburger{
+class Hamburger{
     constructor() {
         /* this.hamburger = document.querySelector("#hamburger")
         this.hamburger.addEventListener('click', this.abrirMenu.bind(this))*/
@@ -31,7 +31,6 @@ export class Hamburger{
         }
     }
 }
-import { Hamburger } from "./hamburguer.js";
 
 class Index {
     constructor() {
