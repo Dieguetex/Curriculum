@@ -1,4 +1,5 @@
 @import 'material-shadow';
+@import 'newHamburger.scss';
 
 *, *::before, *::after, 
 *:before, *:after { 
@@ -26,7 +27,9 @@ box-sizing : border-box;
     font-family: 'Roboto', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
+.prueba{
+background-origin: padding-box;
+}
 
 header{
     color: whitesmoke;  
