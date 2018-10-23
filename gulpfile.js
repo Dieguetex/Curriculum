@@ -36,23 +36,23 @@ gulp.task('css', function () {
         autoprefixer({browsers: ['last 1 version']}),
         cssnano()
     ];
-    return gulp.src('./src/*.css')
+    return gulp.src('./src/css/*.css')
         .pipe(postcss(plugins))
         .pipe(gulp.dest('./dist/css'));
 });
 
 // Concatenate & Minify Project Lingo JS files
 gulp.task('scripts', () => {
-    return gulp.src('/src/js/*.js')
+    return gulp.src('./src/js/*.js')
         .pipe(concat('build.js'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('./dist/js/'))
         .pipe(rename('build.min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dist/js/'));
 });
 // Compress all Project Lingo image files
 gulp.task('compress-images', () => {
-     gulp.src('./src/assets/*')
+     gulp.src('./src/assets/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/assets'))
 });
@@ -63,9 +63,9 @@ gulp.task('watch', () => {
     // Sass changes
     gulp.watch('./src/scss/*.scss', ['sass']);
     // CSS changes
-    gulp.watch('./src/css/*.scss', ['css']);
+    gulp.watch('./src/css/*.css', ['css']);
     // Image changes
-    gulp.watch('./src/assets/*', ['compress-images']);
+    gulp.watch('./src/assets/**/*', ['compress-images']);
 });
 // Run Project Lingo Task
 gulp.task('lingo', ['sass', 'css', 'scripts', 'compress-images', 'watch']);

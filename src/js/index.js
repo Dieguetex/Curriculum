@@ -1,7 +1,9 @@
 import { Hamburger } from "./hamburguer.js";
 
-export class Index {
+class Index {
     constructor() {
-        new Hamburger()
+        new Hamburger();
     }  
 }
+
+document.addEventListener('DOMContentLoaded', () => {new Index()});
