@@ -9,17 +9,17 @@ export class Main{
     }
 
     desplegar(oE) {
-        console.log('click en section!');
+        //console.log('click en section!');
 
         let nodoBtn = oE.target;
         let nodoTexto = nodoBtn.nextElementSibling;
 
         nodoTexto.classList.toggle('hide');
         if(!nodoTexto.classList.contains('hide')) {
-            console.log('Abrete');
+            //console.log('Abrete');
             nodoTexto.classList.remove('hide');
         } else {
-            console.log('Cierrate');
+            //console.log('Cierrate');
             nodoTexto.classList.add('hide');
         }        
     }
