@@ -42,7 +42,7 @@ gulp.task('css', function () {
 
 // Concatenate & Minify Project Lingo JS files
 gulp.task('scripts', () => {
-    return gulp.src('./dist/js/index.js')
+    return gulp.src('./src/js/index.js')
         .pipe(rollup('es'))
         .pipe(gulp.dest('./dist/js'))
         .pipe(minify())
@@ -58,7 +58,7 @@ gulp.task('compress-images', () => {
 // Watch Files For Changes
 gulp.task('watch', () => {
     // JavaScript changes
-    gulp.watch('./src/js/*.js', ['lint', 'scripts',/* 'minJS' */]);
+    gulp.watch('./src/js/*.js', ['lint', 'scripts']);
     // Sass changes
     gulp.watch('./src/scss/*.scss', ['sass']);
     // CSS changes
@@ -67,4 +67,4 @@ gulp.task('watch', () => {
     gulp.watch('./src/assets/**/*', ['compress-images']);
 });
 // Run Project Lingo Task
-gulp.task('lingo', ['sass', 'css', 'scripts'/*,  'minJS' */, 'compress-images', 'watch']);
+gulp.task('lingo', ['sass', 'css', 'scripts', 'compress-images', 'watch']);

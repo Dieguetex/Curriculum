@@ -54,7 +54,6 @@
   display: block;
   width: 18px;
   height: 1px;
-  z-index: 999;
   background: #fff;
 }
 
@@ -104,7 +103,6 @@
 }
 
 .head .icon svg {
-  z-index: 10;
   width: 100%;
   height: 100%;
 }
@@ -132,8 +130,7 @@
   transition: stroke-dashoffset .5s;
 }
 
-*, *::before, *::after,
-*:before, *:after {
+*, *::before, *::after, *:before, *:after {
   box-sizing: border-box;
 }
 
@@ -155,12 +152,12 @@
   padding-left: 2rem;
 }
 
-* {
-  font-family: 'Roboto', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+.fixedPosition {
+  position: fixed;
 }
 
-.prueba {
-  background-origin: padding-box;
+* {
+  font-family: 'Roboto', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -235,6 +232,48 @@ header div.banner > div:nth-of-type(1) img {
   height: 100%;
 }
 
+header nav.navMobile {
+  background-color: rgba(51, 51, 51, 0.9);
+  position: fixed;
+  overflow: auto;
+  top: 4rem;
+  right: -100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+}
+
+header nav.navMobile ul {
+  list-style-type: none;
+  padding-left: 2rem;
+}
+
+header nav.navMobile ul li a {
+  text-align: center;
+  color: #f2f2f2;
+  text-decoration: none;
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0rem;
+  transition: all 250ms;
+}
+
+header nav.navMobile ul li a:hover {
+  padding-left: 45px;
+  background-color: #ddd;
+  color: black;
+}
+
+header nav.navMobile.active {
+  right: 0;
+  opacity: 1;
+}
+
+header nav.navMobile {
+  will-change: transform, opacity;
+}
+
 header div.mainHeader {
   /* width: 80%; */
   text-align: center;
@@ -283,6 +322,7 @@ main section.material {
 }
 
 main section h2 {
+  text-align: center;
   font-weight: 100;
   font-size: 35px;
   line-height: 44px;

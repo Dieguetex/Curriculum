@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./dist/css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./dist/css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <!-- LINK A HAMBURGUESA VIEJA
         <link href="./css/hamburgers.css" rel="stylesheet"> -->
     <script src="./dist/js/index-min.js" type="module"></script>
@@ -19,7 +19,7 @@
 <body>
     <header>
         <div class="container mainHeader">
-            <h1 class="child">Diego Pérez Mansilla</h1>
+            <h1 id="inicio" class="child">Diego Pérez Mansilla</h1>
             <p class="child">Realización audiovisual + marketing online + programación front-end + inglés</p>
 
             <p class="childHeader">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque atque amet saepe
@@ -67,20 +67,19 @@
                 </span>
             </button> -->   
         </div>
-
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Educación</a></li>
-                <li><a href="#">Trayectoria profesional</a></li>
-                <li><a href="#">Otros datos</a></li>
-                <li><a href="#">About</a></li>
+        <nav id="menuMobile" class="navMobile">
+            <ul id="items">
+                <li class="item"><a href="#inicio">Inicio</a></li>
+                <li class="item"><a href="#educacion">Educación</a></li>
+                <li class="item"><a href="#trayectoria">Trayectoria profesional</a></li>
+                <li class="item"><a href="#otros">Otros datos</a></li>
+                <li class="item"><a href="#">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="material dark">
+        <section class="material dark" id="educacion">
             <div>
                 <h2>Educación</h2>
 
@@ -110,7 +109,7 @@
             </div>
         </section>
 
-        <section class="material dark">
+        <section class="material dark" id="trayectoria" >
             <div>
                 <h2>Trayectoria Profesional</h2>
 
@@ -136,7 +135,7 @@
             </div>
         </section>
 
-        <section class="material dark">
+        <section class="material dark" id="otros">
             <div>
                 <h2>Otros datos</h2>
 

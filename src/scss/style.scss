@@ -1,8 +1,8 @@
 @import 'material-shadow';
 @import 'newHamburger.scss';
+$easing: cubic-bezier(.6, .05, .28, .91);
 
-*, *::before, *::after, 
-*:before, *:after { 
+*, *::before, *::after, *:before, *:after { 
 box-sizing : border-box;
 }
 
@@ -23,13 +23,14 @@ box-sizing : border-box;
     padding-left: 2rem;
 }
 
+.fixedPosition{
+   position: fixed;
+}
+
 * {
     font-family: 'Roboto', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.prueba{
-background-origin: padding-box;
-}
 
 header{
     color: whitesmoke;  
@@ -103,6 +104,47 @@ header{
         }*/  
     }
 
+    nav.navMobile{
+        background-color: rgba(51, 51, 51, 0.9);
+        position: fixed;
+        overflow: auto;
+        top: 4rem;
+        right: -100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 350ms $easing;
+        ul{
+            list-style-type: none;
+            padding-left: 2rem;;
+            li { 
+                a{
+                    text-align: center;
+                    color: #f2f2f2;
+                    text-decoration: none;
+                    display: block;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 0rem;
+                    transition: all 250ms;
+                    &:hover {
+                        padding-left: 45px;
+                        background-color: #ddd;
+                        color: black;
+                   }
+               }
+           }
+        }
+
+        &.active {
+            right: 0;
+            opacity: 1;
+        }
+        & {
+            will-change: transform, opacity;
+        }
+        
+    }
+
     div.mainHeader{
         /* width: 80%; */
         text-align: center;
@@ -146,6 +188,7 @@ main {
             @include material-shadow($z-depth: 3);
         }
         h2{
+            text-align: center;
             font-weight: 100;
             font-size: 35px;
             line-height: 44px;
