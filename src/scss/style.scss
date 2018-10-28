@@ -27,6 +27,15 @@ box-sizing : border-box;
    position: fixed;
 }
 
+.anchor{
+    padding-top: 60px;
+    margin-top: -6px;
+}
+
+.hide{
+    display: none;
+    transition: all 350ms $easing;
+}
 * {
     font-family: 'Roboto', Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -36,6 +45,7 @@ header{
     color: whitesmoke;  
     background-color: rgb(58, 78, 88);
     padding-bottom: 10vh;
+    margin-bottom: 6px;
 
     div.banner{
         @include material-shadow($z-depth:2 );
@@ -115,15 +125,15 @@ header{
         transition: all 350ms $easing;
         ul{
             list-style-type: none;
-            padding-left: 2rem;;
+            padding-left: 0px;
             li { 
                 a{
                     text-align: center;
                     color: #f2f2f2;
                     text-decoration: none;
                     display: block;
-                    padding-top: 0.5rem;
-                    padding-bottom: 0.5rem;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
                     padding-left: 0rem;
                     transition: all 250ms;
                     &:hover {
