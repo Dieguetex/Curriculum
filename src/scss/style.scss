@@ -1,4 +1,4 @@
-@import 'material-shadow';
+@import 'material-shadow.scss';
 @import 'newHamburger.scss';
 $easing: cubic-bezier(.6, .05, .28, .91);
 
@@ -42,6 +42,7 @@ header{
     background-color: rgb(58, 78, 88);
     padding-bottom: 10vh;
     margin-bottom: 6px;
+  
 
     div.banner{
         @include material-shadow($z-depth:2 );
@@ -155,6 +156,51 @@ header{
         /* width: 80%; */
         text-align: center;
         margin-bottom: 3rem;
+
+        .icons{
+            margin-bottom: 5rem;
+    
+            a:nth-child(1){
+                text-decoration: none;
+                .icon{
+                    color: #f2f2f2;
+                    outline-style: none;
+                    font-size: 2.5em;
+                    border-radius: 100%;
+                }
+                .float {
+                    @include material-shadow($z-depth: 2);
+                    transition: all .2s ease-out;
+    
+                    &:hover {
+                        transform: translateY(-4px);
+                        @include material-shadow(4);
+                        border-radius: 100%;
+                    }
+                }                        
+            }
+    
+            a:nth-child(2), a:nth-child(3){
+                text-decoration: none;
+                margin-left: 2rem;
+    
+                .icon{
+                    color: #f2f2f2;
+                    outline-style: none;
+                    font-size: 2.5em;
+                }
+
+                .float {
+                    @include material-shadow($z-depth: 2);
+                    transition: all .2s ease-out;
+    
+                    &:hover {
+                        transform: translateY(-4px);
+                        @include material-shadow(4);
+                    }
+                }             
+            }
+        }
 
         p{
             font-weight: 300;

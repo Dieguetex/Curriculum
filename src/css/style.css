@@ -286,6 +286,53 @@ header div.mainHeader {
   margin-bottom: 3rem;
 }
 
+header div.mainHeader .icons {
+  margin-bottom: 5rem;
+}
+
+header div.mainHeader .icons a:nth-child(1) {
+  text-decoration: none;
+}
+
+header div.mainHeader .icons a:nth-child(1) .icon {
+  color: #f2f2f2;
+  outline-style: none;
+  font-size: 2.5em;
+  border-radius: 100%;
+}
+
+header div.mainHeader .icons a:nth-child(1) .float {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all .2s ease-out;
+}
+
+header div.mainHeader .icons a:nth-child(1) .float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 100%;
+}
+
+header div.mainHeader .icons a:nth-child(2), header div.mainHeader .icons a:nth-child(3) {
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+header div.mainHeader .icons a:nth-child(2) .icon, header div.mainHeader .icons a:nth-child(3) .icon {
+  color: #f2f2f2;
+  outline-style: none;
+  font-size: 2.5em;
+}
+
+header div.mainHeader .icons a:nth-child(2) .float, header div.mainHeader .icons a:nth-child(3) .float {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all .2s ease-out;
+}
+
+header div.mainHeader .icons a:nth-child(2) .float:hover, header div.mainHeader .icons a:nth-child(3) .float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 header div.mainHeader p {
   font-weight: 300;
   font-size: 16px;
