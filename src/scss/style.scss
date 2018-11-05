@@ -75,6 +75,7 @@ header{
         align-items: center;
         justify-content: center;
         justify-items: center;
+        z-index: 99;
 
         //hamburguesa
         .head{
@@ -124,6 +125,7 @@ header{
         width: 100%;
         opacity: 0;
         transition: all 350ms $easing;
+        z-index: 11;
         ul{
             list-style-type: none;
             padding-left: 0px;
@@ -270,7 +272,7 @@ main {
     div.floatItSelfBack{
         transition: all .8s $easing;
         transform: translateY(0px);
-        
+
     }
 
     section{

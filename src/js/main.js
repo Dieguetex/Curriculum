@@ -1,14 +1,14 @@
 export class Main{
     constructor() {
         this.dropDown = document.querySelectorAll('h2');
-        this.nodoSection1 = document.querySelector('#moveIt1');
-        this.nodoSection2 = document.querySelector('#moveIt2');
-        this.nodoSection3 = document.querySelector('#moveIt3');
+        this.nodoSection = document.querySelectorAll('.moveIt');
 
         this.dropDown.forEach( item => {
             item.addEventListener('click', this.desplegar.bind(this));
         });
-        document.addEventListener('scroll', this.isScrolledIntoView.bind(this))
+
+        
+        document.addEventListener('scroll', this.animarSection.bind(this))
     }
 
     desplegar(oE) {
@@ -26,9 +26,39 @@ export class Main{
             nodoTexto.classList.add('hide');
         }        
     }
-    isScrolledIntoView(element) {
-        console.log('entra!')
-        let rect = this.nodoSection1.getBoundingClientRect();
+
+    animarSection(){
+        //console.log('aquui estoy!')
+
+        /* let aSection = */this.nodoSection.forEach(item => {
+            if (this.isScrolledIntoView(item)){
+                item.classList.remove('floatItSelfBack')
+                item.classList.add('floatItSelf');
+            } else{
+                item.classList.remove('floatItSelf')
+                item.classList.add('floatItSelfBack')
+            }
+            
+        })
+        
+/*         if (aSection){
+            console.log('se ve el elemento entero!');
+            this.nodoSection.forEach(item => { 
+                item.classList.remove('floatItSelfBack')
+                item.classList.add('floatItSelf');
+            })
+        } else{
+            this.nodoSection.forEach(item => { 
+                item.classList.remove('floatItSelf')
+                item.classList.add('floatItSelfBack')
+            })
+        } */
+
+    }
+
+    isScrolledIntoView(oEv) {
+        //console.log(oEv)
+        let rect = oEv.getBoundingClientRect();
         let elemTop = rect.top;
         let elemBottom = rect.bottom;
     
@@ -36,24 +66,7 @@ export class Main{
         let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
         // Partially visible elements return true:
         //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-
-/*         if (isVisible) {
-            console.log('se ve el elemento entero!');
-            element.classList.remove('floatItSelfBack');
-            element.classList.add('floatItSelf');
-        } else{
-            element.classList.remove('floatItSelf');
-            element.classList.add('floatItSelfBack');
-        } */
         
-        if(isVisible){
-            console.log('se ve el elemento entero!');
-            this.nodoSection1.classList.remove('floatItSelfBack')
-            this.nodoSection1.classList.add('floatItSelf');
-        } else{
-            this.nodoSection1.classList.remove('floatItSelf')
-            this.nodoSection1.classList.add('floatItSelfBack')
-        }
-        
+        return isVisible;
     }
 }
