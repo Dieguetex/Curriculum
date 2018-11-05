@@ -12,10 +12,10 @@
   
   
   .float {
-    transition: all .2s ease-out;
-    &:hover {
-      transform: translateY(-5px);
-      @include material-shadow(5);
+      transition: all .2s ease-out;
+      &:hover {
+        transform: translateY(-5px);
+        @include material-shadow(5);
     }
   } */
 /* .head {
@@ -130,7 +130,7 @@
   transition: stroke-dashoffset .5s;
 }
 
-> div {
+body > div {
   height: 0;
 }
 
@@ -291,7 +291,7 @@ header div.mainHeader {
 }
 
 header div.mainHeader .icons {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 header div.mainHeader .icons a:nth-child(1) {
@@ -325,6 +325,7 @@ header div.mainHeader .icons a:nth-child(2) .icon, header div.mainHeader .icons 
   color: #f2f2f2;
   outline-style: none;
   font-size: 2.5em;
+  border-radius: 5px;
 }
 
 header div.mainHeader .icons a:nth-child(2) .float, header div.mainHeader .icons a:nth-child(3) .float {
@@ -337,14 +338,45 @@ header div.mainHeader .icons a:nth-child(2) .float:hover, header div.mainHeader 
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+header div.mainHeader .cv {
+  margin-bottom: 3rem;
+}
+
+header div.mainHeader .cv a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+header div.mainHeader .cv a .icon {
+  /*                     color: #2b3a42;
+                    padding: 12px 2rem;
+                    border-radius: 13px;
+                    background-color: #f2f2f2;
+                    outline-style: none;
+                    font-size: 1.25rem; */
+  color: #f2f2f2;
+  outline-style: none;
+  font-size: 2.5em;
+}
+
+header div.mainHeader .cv .float {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: all .2s ease-out;
+}
+
+header div.mainHeader .cv .float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 header div.mainHeader p {
   font-weight: 300;
   font-size: 16px;
   line-height: 26px;
 }
 
-header div.mainHeader p:nth-of-type(1) {
-  margin-bottom: 6rem;
+header div.mainHeader > p:nth-of-type(1), header div.mainHeader > p:nth-of-type(2) {
+  margin-bottom: 3rem;
 }
 
 header div.mainHeader h1 {
@@ -364,6 +396,17 @@ main {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
+}
+
+main div.floatItSelf {
+  transition: all 0.8s cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+main div.floatItSelfBack {
+  transition: all 0.8s cubic-bezier(0.6, 0.05, 0.28, 0.91);
+  transform: translateY(0px);
 }
 
 main section {
