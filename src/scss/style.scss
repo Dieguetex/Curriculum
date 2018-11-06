@@ -264,17 +264,19 @@ main {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    div.floatItSelf{
-        transition: all .8s $easing;
-        transform: translateY(-5px);
-        @include material-shadow(5);
-    }
-    div.floatItSelfBack{
-        transition: all .8s $easing;
-        transform: translateY(0px);
+    div{
+        border-radius: 10px;
+        &.floatItSelf{
+            transition: all .8s $easing;
+            transform: translateY(-5px);
+            @include material-shadow(5);
+        }
+        &.floatItSelfBack{
+            transition: all .8s $easing;
+            transform: translateY(0px);
 
+        }
     }
-
     section{
         border-bottom: .5px solid silver;
         border-radius: 10px;
@@ -284,7 +286,6 @@ main {
         &.material{
             @include material-shadow($z-depth: 3);
         }
-
         h2{
             text-align: center;
             font-weight: 100;

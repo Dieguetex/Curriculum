@@ -400,6 +400,10 @@ main {
   margin-right: auto;
 }
 
+main div {
+  border-radius: 10px;
+}
+
 main div.floatItSelf {
   transition: all 0.8s cubic-bezier(0.6, 0.05, 0.28, 0.91);
   transform: translateY(-5px);

@@ -39,9 +39,13 @@ class Hamburger{
 class Main{
     constructor() {
         this.dropDown = document.querySelectorAll('h2');
+        this.nodosArrow = document.querySelectorAll('.arrow');
         this.nodoSection = document.querySelectorAll('.moveIt');
 
         this.dropDown.forEach( item => {
+            item.addEventListener('click', this.desplegar.bind(this));
+        });
+        this.nodosArrow.forEach( item => {
             item.addEventListener('click', this.desplegar.bind(this));
         });
 
@@ -51,17 +55,43 @@ class Main{
 
     desplegar(oE) {
         //console.log('click en section!');
+ 
+        let nodoTexto = oE.target.nextElementSibling;
 
-        let nodoBtn = oE.target;
-        let nodoTexto = nodoBtn.nextElementSibling;
+        //funciona mientras se haga click en h2... si se hace click en arrow el nodotexto se ejecuta y no funciona! 
+        
+        //deberé hacer un nodo específico para el section... y generalizar la función.
 
         nodoTexto.classList.toggle('hide');
-        if(!nodoTexto.classList.contains('hide')) {
+        
+        if(!nodoTexto.classList.contains('hide')){
             //console.log('Abrete');
             nodoTexto.classList.remove('hide');
+            this.nodosArrow.forEach( item => {
+                console.log('arrow');
+                item.classList.remove('fa-caret-down');
+                item.classList.add('fa-caret-up');
+            });
+
+
+
+/*             this.nodosArrow.classList.remove('fa-caret-down');
+            this.nodosArrow.classList.add('fa-caret-up') */
+
         } else {
             //console.log('Cierrate');
             nodoTexto.classList.add('hide');
+            
+            this.nodosArrow.forEach( item => {
+                item.classList.remove('fa-caret-up');
+                item.classList.add('fa-caret-down');
+            });
+
+
+/*             this.nodosArrow.classList.add('fa-caret-down');
+            this.nodosArrow.classList.remove('fa-caret-up') */
+
+
         }        
     }
 
