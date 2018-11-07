@@ -1,3 +1,4 @@
+$easing: cubic-bezier(.6, .05, .28, .91);
 /* .head {
 	position: fixed;
 	top: 15px;
@@ -89,14 +90,14 @@
 
 .head .icon svg circle {
 	fill: none;
-	stroke: #fff;
+	stroke: #436775;
 	stroke-width: .5;
 	stroke-linecap: round;
 	stroke-linejoin: round;
 	stroke-dasharray: 39 39;
 	stroke-dashoffset: -39;
 	-webkit-transition: stroke-dashoffset .5s;
-	transition: stroke-dashoffset .5s;
+	transition: all .5s /* $easing */;
 }
 
 .head.animate .line {
@@ -106,6 +107,7 @@
 
 .head.animate svg circle {
 	stroke-dashoffset: 0;
+	stroke: #fff;
 	-webkit-transition: stroke-dashoffset .5s;
-	transition: stroke-dashoffset .5s;
+	transition: all .5s /* $easing */;
 }
